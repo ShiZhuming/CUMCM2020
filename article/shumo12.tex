@@ -1,0 +1,88 @@
+% !Mode:: "TeX:UTF-8"
+% !TEX program  = xelatex
+
+% \documentclass{cumcmthesis}
+\documentclass[withoutpreface,bwprint]{cumcmthesis} %去掉封面与编号页，电子版提交的时候使用。
+
+
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{url}   % 网页链接
+% \usepackage{subcaption} % 子标题
+\title{基于宽度优先搜索的穿越沙漠最优路径规划}
+
+\begin{document}
+
+ \maketitle
+ \begin{abstract}
+
+
+\keywords{宽度优先搜索\quad  图搜索\quad   最优路径规划\quad  规划模型}
+\end{abstract}
+
+%目录  2019 明确不要目录，我觉得这个规定太好了
+%\tableofcontents
+
+%\newpage
+
+\section{问题重述}
+
+穿越沙漠问题是一个在约束条件下求最优解的问题，具体来说，指在给定的地图上，玩家在游戏开始时获得一定的初始资金，可以在起点购买一定数量的水和食物，然后从起点出发，穿过沙漠抵达终点。在穿越沙漠中，玩家所携带的水和食物不能呢超越其最大背负重量，但必须大于等于当天的消耗，从而不至于渴死或者饿死。穿越途中会遇到不同的天气，也可以在矿山获得资金，或者在村庄购买资源，抵达终点之后也可以退回多余的水和食物。游戏要求在规定的时间到达终点，在终点拥有的资金则多多益善。
+
+我们需要建立数学模型解决如下具体问题：
+
+\subsection{问题一}
+只有一名玩家，游戏开始时，游戏时间内每天天气情况就全部已知，在此条件下求解一个最优策略，使得到达终点时持有最多的资金。
+
+\section{问题分析}
+沙漠的地图可以抽象为一张无向连通图，我们可以通过宽度优先搜索(BFS)来
+\section{问题一的分析}
+问题一中游戏全程的天气情况都是已知的，
+
+\section{基本假设}
+
+\section{变量说明}
+
+\begin{table}[!htbp]
+    \caption{符号说明}\label{tab:001} \centering
+    \begin{tabular}{ccc}
+        \toprule[1.5pt]
+        符号 & 意义 & 单位\\
+        \midrule[1pt]
+        $d$ & 当前日期 & \\
+        $p$ & 所在的区域编号 & \\
+        $f$ & 所带的食物 & 箱\\
+        $w$ & 所带的水 & 箱\\
+        $m$ & 所带的资金 & 元\\
+        \bottomrule[1.5pt]
+    \end{tabular}
+\end{table}
+
+\section{模型的建立与求解}
+
+
+\section{参考文献与引用}
+
+%参考文献
+\begin{thebibliography}{9}%宽度9
+    % \bibitem[1]{liuhaiyang2013latex}
+    % 刘海洋.
+    % \newblock \LaTeX {}入门\allowbreak[J].
+    % \newblock 电子工业出版社, 北京, 2013.
+    \bibitem{mathematical-modeling}
+    全国大学生数学建模竞赛论文格式规范 (2020 年 8 月 25 日修改).
+    \bibitem{latexstudio} \url{https://www.latexstudio.net}
+\end{thebibliography}
+
+\newpage
+%附录
+\begin{appendices}
+
+\section{程序}
+
+\begin{lstlisting}[language=matlab]
+
+\end{lstlisting}
+
+\end{appendices}
+
+\end{document} 
